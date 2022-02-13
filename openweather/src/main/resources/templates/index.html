@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing page</title>
+</head>
+<body>
+    <form action="/weather"
+          method="get">
+        <label for="city">Name of city</label>
+        <input type="text" name="city" id="city" placeholder="Singapore" required>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

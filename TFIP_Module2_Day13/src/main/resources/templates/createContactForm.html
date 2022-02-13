@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Contacts</title>
+</head>
+<body>
+
+    <form th:action="@{/contact}"
+          th:object="${Contact}"
+          method="post">
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" th:field="*{name}">
+        <br>
+        <label for="email">email:</label><br>
+        <input type="text" id="email" name="email" th:field="*{email}">
+        <br>
+        <label for="phone number">phone number:</label>
+        <br>
+        <input type="text" id="phone number" name="phone number"
+               th:field="*{phoneNumber}"><br>
+        <button type="submit">submit</button>
+    </form>
+    <br>
+
+
+    <form th:action="@{getContactByID}" method="get">
+        <label for="ID">Search by ID</label><br>
+        <input type="text" name="ID" id="ID" placeholder="key in ID to search">
+        <button type="submit">get contact</button>
+    </form>
+
+</body>
+</html>

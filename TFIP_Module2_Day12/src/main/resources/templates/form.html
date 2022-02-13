@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+
+    <h1>How many numbers do you want to generate?</h1>
+    <form 
+        th:action="@{/generateImages}"
+        th:object="${input}"
+        method="post">
+
+        <input type="text" th:field="*{number}">
+        <input type="submit" value="generate images">
+    </form>
+</body>
+</html>

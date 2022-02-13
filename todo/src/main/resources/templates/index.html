@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<link rel="stylesheet" href="bootstrap.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To do list</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">To do list</h1>
+<!--        <p>testing changes</p>-->
+    <form action="/task"
+          method="POST">
+        <label for="taskName">task: </label>
+        <input type="text" id="taskName"
+               name="taskName"
+               placeholder="please enter task"
+               required  >
+        <input type="hidden" id="contents" name="contents"
+               th:value="${outputContent}">
+
+        <div class="d-flex justify-content-left">
+            <button type="submit" class="btn btn-primary">submit</button>
+            <button type="submit" class="btn btn-warning"
+                    formaction="/savetask" formmethod="POST">save</button>
+        </div>
+    </form>
+</div>
+
+
+</body>
+</html>

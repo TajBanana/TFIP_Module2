@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>your book list</h1>
+    <div class="book-list">
+        <div th:each="book:${bookList}">
+            <a th:href="${'book/'+book.bookKey}" th:text="${book.bookTitle}"></a>
+        </div>
+
+        <div>
+            <a href="/">back</a>
+        </div>
+    </div>
+</body>
+</html>

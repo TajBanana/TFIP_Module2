@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    <h1>No. of images: <span th:text="${userNumber}"></span></h1>
+    <ul th:each="image : ${selectedImages}">
+        <img th:src="@{${'/images/' + image}}" width=200 height=200/>
+    </ul>
+</body>
+</html>
